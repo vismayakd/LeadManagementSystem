@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>History for {{ lead.name }}</h2>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Updated At</th>
+            <th>Old Status</th>
+            <th>New Status</th>
+            <th>Updated By</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for h in history %}
+        <tr>
+            <td>{{ h.updated_at }}</td>
+            <td>{{ h.old_status }}</td>
+            <td>{{ h.new_status }}</td>
+            <td>{{ h.updated_by }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Employee Dashboard{% endblock %}
+
+{% block content %}
+
+<h2 class="mb-4">Employee Dashboard</h2>
+
+<div class="row mt-4">
+    <div class="col-md-3 mb-3">
+        <div class="card shadow-sm bg-success" >
+            <div class="card-body text-center text-white">
+                <h5>Total Assigned Leads</h5>
+                <h3>{{ total_leads }}</h3>
+            </div>
+        </div>
+    </div>
+     <div class="col-md-3 mb-3">
+        <div class="card shadow-sm bg-info">
+            <div class="card-body text-center">
+                <h5>New Leads</h5>
+                <h3>{{ new_leads }}</h3>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col-md-3 mb-3">
+        <div class="card shadow-sm bg-warning">
+            <div class="card-body text-center">
+                <h5>In Progress</h5>
+                <h3>{{ in_progress }}</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3 mb-3">
+        <div class="card shadow-sm bg-danger">
+            <div class="card-body text-center text-white">
+                <h5>Closed</h5>
+                <h3>{{ closed }}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
